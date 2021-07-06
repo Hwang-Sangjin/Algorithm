@@ -21,15 +21,17 @@ void go(int index, int cnt) {
         bool check[22];
         memset(check, false, sizeof(check));
         for (auto t : v) {
+            //cout << t << ' ';
             check[t] = true;
         }
+        //cout << '\n';
 
-        int start=0, link=0;
+        int start = 0, link = 0;
 
         for (int i = 1; i < N; i++) {
-            if (check[i]==true) {
+            if (check[i] == true) {
                 for (int j = i + 1; j <= N; j++) {
-                    if (check[j]==true) {
+                    if (check[j] == true) {
                         start += map[i][j];
                         start += map[j][i];
                     }
@@ -47,7 +49,6 @@ void go(int index, int cnt) {
 
         int sub = abs(start - link);
         if (res == -1 || res > sub)res = sub;
-        return;
     }
     for (int i = index + 1; i <= N; i++) {
         v.push_back(i);
