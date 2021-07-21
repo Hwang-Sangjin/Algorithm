@@ -8,8 +8,6 @@
 #include <string>
 #include <time.h>
 
-int di[4] = { -1,0,1,0 };
-int dj[4] = { 0,1,0,-1 };
 using namespace std;
 
 int dp[10002];
