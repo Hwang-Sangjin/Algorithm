@@ -8,7 +8,7 @@
             "name": "(gdb) 시작",
             "type": "cppdbg",
             "request": "launch",
-            "program": "./BOJ/4375",
+            "program": "./BOJ/else/9935.cpp",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
