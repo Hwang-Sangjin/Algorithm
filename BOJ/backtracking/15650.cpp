@@ -17,8 +17,8 @@ int N, M;
 bool v[10];
 vector<int> con;
 
-void go(int index) {
-	if (index == M) {
+void go(int index,int cnt) {
+	if (cnt == M) {
 		for (auto t : con) {
 			cout << t << ' ';
 		}
@@ -26,11 +26,11 @@ void go(int index) {
 		return;
 	}
 
-	for (int i = 1; i <= N; i++) {
+	for (int i = index; i <= N; i++) {
 		if (v[i]) continue;
 		v[i] = true;
 		con.push_back(i);
-		go(index + 1);
+		go(i,cnt + 1);
 		con.pop_back();
 		v[i] = false;
 	}
@@ -40,5 +40,5 @@ void go(int index) {
 int main() {
 	cin >> N >> M;
 
-	go(0);
+	go(1,0);
 }
