@@ -44,3 +44,34 @@ function solution(n, arr1, arr2) {
     
     return answer;
 }
+
+
+
+//더 나은 풀이
+
+function solution(n, arr1, arr2) {
+  var answer = [];
+  
+  const binaryNumber1 = arr1
+  .map((num) => num.toString(2))
+  .map(e => e.padStart(n,0))
+  
+  const binaryNumber2 = arr2
+  .map(num => num.toString(2))
+  .map(e=> e.padStart(n,0))
+  
+  for(let i=0;i<n;i++){
+      let temp =""
+      for(let j=0;j<n;j++){
+          if(binaryNumber1[i][j]==='1' || binaryNumber2[i][j] ==='1'){
+              temp+='#'
+          }
+          else{
+              temp+=' '
+          }
+      }
+      answer.push(temp)
+  }
+
+  return answer;
+}
