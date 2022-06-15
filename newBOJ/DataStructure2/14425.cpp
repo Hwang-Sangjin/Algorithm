@@ -15,15 +15,6 @@
 
 using namespace std;
 
-bool isNumber(string s)
-{
-  char c = s[0];
-
-  if (c >= '0' && c <= '9')
-    return true;
-  return false;
-}
-
 int main()
 {
   ios_base::sync_with_stdio(false);
