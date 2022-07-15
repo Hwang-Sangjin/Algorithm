@@ -100,3 +100,5 @@ int main()
 
   return 0;
 }
+
+// SCPC 문제
