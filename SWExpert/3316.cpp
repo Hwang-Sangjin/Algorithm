@@ -61,8 +61,7 @@ int main()
           {
             for (int j = 1; j < 16; j++)
             {
-              // 전날 나온 사람이 오늘도 나오고 (i & j != 0)
-              // 오늘 나온 사람이 관리자인 경우 count (j & admin != 0)
+              (j & admin != 0)
               if ((i & j) != 0 && (j & admin) != 0)
               {
                 dp[day][j] += dp[day - 1][i];
