@@ -10,6 +10,7 @@ function solution(n, arr1, arr2) {
               return '#'
           }
       });
+      
      
       while(temp.length <n){
           temp.unshift(' ')
